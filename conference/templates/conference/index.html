@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conference 2025 | Assam University</title>
+  <link rel="stylesheet" href="{% static 'css/styles1.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">NEISS<span>2025</span></div>
+  <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="{% url 'home' %}" class="active">Home</a></li>
+    <li><a href="{% url 'about' %}">About</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+    <li><a href="{% url 'pricing' %}">Pricing</a></li>
+    {% if user.is_authenticated %}
+      <li><a href="{% url 'profile' %}">My Profile</a></li>
+      <li><a href="{% url 'logout' %}">Logout</a></li>
+    {% else %}
+      <li><a href="{% url 'signup' %}">Sign Up</a></li>
+      <li><a href="{% url 'login' %}">Login</a></li>
+    {% endif %}
+  </ul>
+</nav>
+
+<main class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>TWO DAY NORTH EAST INTERNATIONAL SUSTAINABLE SUMMIT 2025</h1>
+    <p class="date">Department of Social Work,<br>Assam University Silchar</p>
+    <p class="date">21-22 November, 2025</p>
+    <p>Sponsored by</p>
+    <p> North Eastern Council, Ministry of Development of North Eastern Region</p>
+    <p>Supported by<br> Assam Pollution Control Board, Department of Environment, Forest and Climate Change</p>
+    
+    <p class="date">Venue: Assam University, Silchar</p>
+
+    <div class="countdown" id="countdown">
+      <div><span id="days">00</span><small>Days</small></div>
+      <div><span id="hours">00</span><small>Hours</small></div>
+      <div><span id="minutes">00</span><small>Minutes</small></div>
+    </div>
+    <div class="cta-buttons">
+      {% if user.is_authenticated %}
+        <a href="{% url 'profile' %}" class="btn primary">My Profile</a>
+        <a href="{% url 'submit' %}" class="btn secondary">Submit</a>
+      {% else %}
+        <a href="{% url 'login' %}" class="btn primary">Login</a>
+      {% endif %}
+    </div>    
+  </div>
+</main>
+
+<button class="floating-toggle" id="theme-toggle" title="Toggle Theme">🌙</button>
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

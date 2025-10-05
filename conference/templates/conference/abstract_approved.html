@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <body style="font-family:Arial, sans-serif; color:#333;">
+    <p>Dear {{ author_name }},</p>
+    <p><strong>Paper Title:</strong> {{ title }}</p>
+    <p><strong>Paper ID:</strong> {{ paper_id }}</p>
+    <p><strong>Affiliation:</strong> {{ affiliation }}</p>
+
+    {% if coauthors %}
+    <p><strong>Co-Authors:</strong></p>
+    <ul>
+      {% for co in coauthors %}
+        <li>{{ co.first_name }} {{ co.last_name }} ({{ co.affiliation }}) – {{ co.email }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <p>
+It gives us immense pleasure to inform you that the Research Paper Scrutiny Committee has accepted the abstract of your research paper with ID IBSSC10041, entitled “{{ title }}”, to be presented in the “Indo Bhutan Social Science Conference” organised by the Department of Business Administration, Assam University, to be held at Bhutan, from 3rd September 2025 to 6th September 2025.
+
+You are further requested to submit the full-length paper and complete the registration process on or before 10th August 2025.
+
+Note: If there are multiple authors in the paper, each author's payment is to be made by the registered person to receive a certificate.
+
+    </p>
+    <p>
+      👉 Join our official WhatsApp group for updates:  
+      <a href="https://chat.whatsapp.com/CPEaa6ek2ur0q6vL7nHJGT">
+        https://chat.whatsapp.com/CPEaa6ek2ur0q6vL7nHJGT
+      </a>
+    </p>
+    <p>You can make the payment and complete your registration by logging into your profile at the link below:
+
+👉 https://ibsscconf-site.onrender.com/profile/
+
+Please note:
+
+Seats for offline presentations are limited, and will be allocated on a first-come, first-served basis.
+
+We encourage you to register at the earliest to secure your preferred presentation mode.
+
+If you have any questions or face any difficulties during the registration process, please feel free to contact the Technical Coordinator directly at 📞 +91-8099142522.
+
+IMPORTANT NOTE: When Travelling to Bhutan, Original Copy of Voter Id Card or Passport is to be carried for verification of border patrol authorities. In case of failure to provide the necessary id proof at the border checkpoint, the conference management is not responsible.</p>
+
+    <p>Regards,<br>IBSSC Secretariat</p>
+  </body>
+</html>

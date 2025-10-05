@@ -1,0 +1,169 @@
+/* ==== Reset ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(rgba(60, 150, 60, 0.6), rgba(20, 60, 20, 0.6)),
+              url("../images/bhutan-mountains2.jpg") no-repeat center/cover;
+  min-height: 100vh;
+  padding: 1rem;
+  color: #222;
+}
+
+/* ==== Navbar ==== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 40, 0, 0.8);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.logo span {
+  color: #a5f3b0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  color: #a5f3b0;
+}
+
+/* ==== Form Wrapper ==== */
+.form-wrapper {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.85); /* frosted effect */
+  backdrop-filter: blur(8px);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.form-wrapper h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #256629;
+}
+
+/* ==== Form Layout ==== */
+form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  display: block;
+  color: #1a3d1a;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: rgba(255,255,255,0.9);
+  transition: border 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #2e7d32;
+  box-shadow: 0 0 6px rgba(46,125,50,0.4);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* ==== Form Card Sections ==== */
+.form-card {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* ==== Co-Authors ==== */
+.co-author-group {
+  border: 1px dashed #2e7d32;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background: rgba(250,250,250,0.8);
+  position: relative;
+}
+
+.remove-button {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ==== Buttons ==== */
+button, .submit-button {
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover, .submit-button:hover {
+  background: #256629;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ==== Mobile ==== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.6rem;
+    text-align: center;
+  }
+
+  .form-wrapper {
+    padding: 1.5rem;
+  }
+}

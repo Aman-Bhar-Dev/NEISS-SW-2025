@@ -1,0 +1,307 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About NEISS 2025</title>
+  <link rel="stylesheet" href="{% static 'css/about.css' %}">
+ <script src="{% static 'js/about.js' %}" defer></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- Background -->
+  <div class="about-page-bg"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">NEISS<span>2025</span></div>
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'about' %}" class="active">About</a></li>
+      <li><a href="{% url 'contact' %}">Contact</a></li>
+      <li><a href="{% url 'itinerary' %}">Itinerary</a></li>    
+      <li><a href="{% url 'submit' %}">Submit</a></li>
+      {% if user.is_authenticated %}
+        <li><a href="{% url 'profile' %}">My Profile</a></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+      {% else %}
+        <li><a href="{% url 'signup' %}">Sign Up</a></li>
+        <li><a href="{% url 'login' %}">Login</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="about-container">
+
+
+<!-- Conference Secretariat -->
+    <section class="organizers-section">
+      <h2>Conference Secretariat</h2>
+      <h3>Chief Patron</h3>
+      <ul>
+        <li>AIR CHEF MARSHAL (RETD,) ARUP RAHA, <br> Chancellor, Assam University</li>
+      </ul>
+      <h3>Patron</h3>
+      <ul>
+        <li>Prof. Rajive Mohan Pant, <br> Vice Chancellor, Assam University</li>
+      </ul>
+
+      <h3>Co-Patron</h3>
+      <ul>
+        <li>DR. PRADOSH KIRAN NATH <br> Registrar, Assam University</li>
+      </ul>
+      <ul>
+        <li>DR. SUBHADEEP DHAR<br> Finance Officer, Assam University</li>
+      </ul>
+      <ul>
+        <li>PROF. TARUN BIKASH SUKAI<br>Head of Department Social Work</li>
+      </ul>
+      <h3>Seminar Coordinator</h3>
+      <ul>
+        <li>PROF. M. TINESHOWRI DEVI <br> Department of Social Work</li>
+      </ul>
+
+      <h3>Seminar Convenor</h3>
+      <ul>
+        <li>DR. LALZO S THANGIOM<br> PH NO. 8812931084 <br> Department of Social Work</li>
+      </ul>
+
+      <h3>Seminar Co-Cordinator</h3>
+      <ul>
+        <li>AVANTIKA LANGTHASA, <br> RAM K. SOREN, <br>
+M. ISHWARJIT SINGH <br> NGAKNINEI CHIRU <br> ARNOB SANYAL<br>
+Ph.D Research Scholars<br>
+Department of Social work <br> Assam University, Silchar</li>
+      </ul>
+
+      <h3>Members of Organising Committee</h3>
+      <ul>
+        <h3> Faculty Members </h3>
+        <li>Prof. Subhabrata Dutta</li>
+        <li>Prof. Molankal Gangabhushan M.</li>
+        <li>Dr. Mrityunjay Singh</li>
+        <li>Dr. Ratna Huirem</li>
+        <li>Dr. Kathiresan L.</li>
+        <li>Dr. G. Albin Joseph</li>
+        <li>Dr. Ritwika Rajendra</li>
+        <li>Dr. Aditi Nath</li>
+        <li>Dr. Kaivalya T. Desa</li>
+        <li>Dr. Jovashri Dey</li>
+        <span class="note">All from Department of Social Work, Assam University</span>
+      </ul>
+      <h3>Scholar/Student Coordinator(s)</h3>
+      <ul>
+
+          <li>Deep Joyti Deuri</li>
+          <li>Srijita Ghosh</li>
+          <li>Charmi Haque</li>
+          <li>Joyjit Bhattacharjee</li>
+          <li>Niengleenchong Chongloi</li>
+          <li>Mazida Khatun</li>
+          <li>Manjam Wangsu</li>
+          <li>Sampita Das</li>
+          <li>Jani Esekkial M.</li>
+          <li>Mondira Sorongpang</li>
+          <li>Stephen Jeng Rongh</li>
+          <li>Jaheda Parveen</li>
+          <li>Amanda Kordor Thaba</li>
+          <li>Sonali Ghosh</li>
+          <li>Prerna Verma</li>
+          <li>Gitanjali Sharma</li>
+          <li>Rajkinkar Chakraborty</li>
+          <li>Jayasurya Balakrishnan</li>
+          <li>Pungringa Agnes</li>
+          <li>Subrajyoti Dey</li>
+          <li>Chayanika Das</li>
+          <li>Ring Greegdao Phonglo</li>
+          <li>Tina Sarkar</li>
+          <li>Sama Newme</li>
+          <li>Suchita Kanoo</li>
+          <li>Rk Kiriabe</li>
+
+        <span class="note">All from Department of Social Work, Assam University</span>
+      </ul>
+    </section>
+
+    <!-- Other Sections -->
+    <section>
+      <h2>ABOUT ASSAM UNIVERSITY</h2>
+      <p> Assam University came into existence in
+ 1994 after enactment of the Assam (Central)
+ University Act 1989. Through its pursuit,
+ Assam University is in the process of making
+ itself an institute of excellence.
+ Assam University main campus is situated at
+ Dargakona, about 20 kms away from
+ Silchar. The campus is set amid sprawling
+ hillocks and typical landscape of north east.
+ The campus is spread over 600 acres and
+ provide an ideal environment for the
+ researchers, 
+students and the people
+ interested in academic excellence. The other
+ campus of the university is situated at Diphu
+ in the district of Karbi Anglong, Assam.
+ The university has the territorial jurisdiction
+ over the five districts of Assam viz., Cachar,
+ Sribhumi, 
+Hailakandi, 
+Dima Hasao
+ (erstwhile North Cachar Hills) and Karbi
+ Anglong. Assam University being a central
+ university hosts a national characteristics of
+ unity in diversity. Faculties, staff and
+ students hail from all over the country.
+ International students also find this
+ institution an ideal centre for pursuing their
+ academic endeavour.</p>
+    </section>
+
+
+    <section>
+      <h2>ABOUT THE CONFERENCE</h2>
+      <p>The Department of Social Work, Assam University is proud to announce
+the "Northeast international Sustainable Summit 2025” under the theme
+“Promoting Sustainable Development through Innovation, Conservation
+and Inclusive Growth in Northeast India". Hosted by Assam University,
+Silchar, Assam, India, the summit invites researchers, scholars, students,
+and faculty members from diverse disciplines arts, humanities, soci
+science, science and technology. This interdisciplinary platform aims to
+foster the exchange of innovative ideas, encourage collaboration, and
+explore how research and innovation can drive a more sustainable and
+inclusive future for the Northeast region.
+
+This conference aims to explore pathways for promoting sustainable
+development through innovation, conservation and inclusive growth in
+Northeast India by ensuring long-term prosperity that benefits both the
+environment and its people. The conference will centre on the links
+between preserving culture and inclusive development through
+traditional knowledge and how indigenous innovations form part of their
+modern conservation work. Empowering women and youth through
+entrepreneurship development along with leadership and skill
+development will be the focus area for equitable prosperity along with
+dialogue on social inequality and community marginalisation as they are
+relevant for social cohesion and inclusive development.
+
+The conference will also discuss how traditional handicrafts and cultural
+heritage can serve as a sustainable livelihood model for local
+communities. it will include ways into Infrastructure and Connectivity
+while promoting green transportation and sustainable urban planning
+with improvements in connectivity to unleash the full potential of
+Northeast India. Developing a cohesive framework for sustainable
+development will require working together with the government along
+with private sector and global partners. This conference will feature
+discussions with different stakeholders along with sharing of actions to
+help promote sustainable and inclusive development in Northeast India.</p>
+    </section>
+    <section>
+      <h2>ABOUT DEPARTMENT OF SOCIAL WORK, ASSAM UNIVERSITY</h2>
+      <p>The Social Work Department of Assam University, Silchar, stands as a premier center for academic excellence and social engagement, dedicated to developing skilled and socially responsible professionals. Established with the vision of addressing pressing social issues, the department offers a comprehensive range of programs, including undergraduate, postgraduate, and doctoral studies, that integrate rigorous theoretical knowledge with extensive practical fieldwork. Students are exposed to diverse areas such as community development, rural and urban welfare, women empowerment, health and mental well-being, social justice, and human rights, equipping them to respond effectively to the needs of society. The department places strong emphasis on research, innovation, and advocacy, encouraging students to undertake impactful projects that contribute to societal transformation and policy development. With a committed and experienced faculty, modern infrastructure, and a collaborative learning environment, the Social Work Department not only fosters academic and professional competence but also instills ethical values, empathy, and a deep sense of civic responsibility. Through active engagement with local communities, NGOs, and governmental initiatives, the department ensures that its students experience real-world challenges firsthand, preparing them to become compassionate leaders and change-makers who can drive meaningful social progress in Assam and beyond.</p>
+    </section>
+    <section>
+
+    <section>
+      <h2>WHO CAN BE THE PARTICIPANT</h2>
+      <p>The conference is aimed at providing a meeting ground for the Intellectual and Professional experts...</p>
+      <ul>
+        <li>Academicians</li>
+        <li>Policy Makers</li>
+        <li>Research Scholars</li>
+        <li>Entrepreneurs</li>
+        <li>Students</li>
+      </ul>
+    </section>
+
+<section>
+  <h2>THEMES AND SUB-THEMES</h2>
+  <ol>
+    <li>
+      <strong>Sustainable Innovation and Economic Growth</strong>
+      <ul>
+        <li>Entrepreneurship and Startups for Sustainable Development</li>
+        <li>Digital Transformation and Smart Infrastructure</li>
+        <li>Traditional Knowledge and Indigenous Innovations</li>
+        <li>Economic Diversification and Innovation</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Environmental Conservation, Management and Biodiversity Protection</strong>
+      <ul>
+        <li>Climate Change Adaptation and Mitigation Strategies</li>
+        <li>Sustainable Agriculture and Organic Farming</li>
+        <li>Eco-Tourism and Sustainable Travel Practices</li>
+        <li>Waste Management and Circular Economy Approaches</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Sociological Approaches to Conservation and Development</strong>
+      <ul>
+        <li>Cultural Preservation and Inclusivity in Development</li>
+        <li>Cultural Sensitivity in Environmental Projects</li>
+        <li>Displacement and Re-settlement Issues in Building Social Capital</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Women and Youth Empowerment for Sustainable Development</strong>
+      <ul>
+        <li>Entrepreneurship and Financial Inclusion for Women and Youth</li>
+        <li>Leadership and Decision-Making Roles for Women in Governance</li>
+        <li>Skill Development and Employment Opportunities for Youth</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Sustainable Livelihoods through Handloom, Handicrafts, and Indigenous Arts</strong>
+      <ul>
+        <li>Strengthening Traditional Handicrafts and Cultural Heritage for Sustainable Livelihoods</li>
+        <li>Reviving Dying Art Forms and Cultural Conservation</li>
+        <li>Government Policies and Support Systems for Artisan Communities</li>
+        <li>Bridging Cultures through Language & Tradition</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Infrastructure and Connectivity for Development</strong>
+      <ul>
+        <li>Improving Road, Rail, and Digital Connectivity in the Northeast</li>
+        <li>Smart Cities and Sustainable Urban Development</li>
+        <li>Role of Government and Private Sector in Infrastructure Growth</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Social Inequality and Empowering Marginalized Communities</strong>
+      <ul>
+        <li>Social Cohesion and Conflict Resolution through Community-led Development Initiatives</li>
+        <li>Cultural Identity and Social Exclusion</li>
+        <li>Social Protection Systems for Vulnerable Populations</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Policy, Governance, and International Collaboration</strong>
+      <ul>
+        <li>Role of Government Policies in Promoting Sustainability</li>
+        <li>Cross-Border Trade and Economic Cooperation in Northeast India</li>
+        <li>Indigenous Rights and Sustainable Development Policies</li>
+        <li>Public-Private Partnerships for Regional Development</li>
+      </ul>
+    </li>
+  </ol>
+</section>
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Assam University Silchar | NEISS2025</p>
+  </footer>
+
+
+</body>
+</html>
+
+
+
+

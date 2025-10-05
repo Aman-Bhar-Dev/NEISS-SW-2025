@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conference Registration | NEISS 2025</title>
+  <link rel="stylesheet" href="{% static 'css/pricing.css' %}">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">NEISS<span>2025</span></div>
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+      <li><a href="{% url 'contact' %}">Contact</a></li>
+      <li><a href="{% url 'submit' %}">Submit</a></li>
+      {% if user.is_authenticated %}
+        <li><a href="{% url 'profile' %}">My Profile</a></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+      {% else %}
+        <li><a href="{% url 'signup' %}">Register</a></li>
+        <li><a href="{% url 'login' %}">Login</a></li>
+      {% endif %}
+    </ul>
+  </header>
+
+  <!-- Registration Fees Section -->
+  <div class="container">
+    <h1>Registration Fees</h1>
+
+    <div class="pricing-table">
+      <div class="pricing-card">
+        <h3>PG Student</h3>
+        <p>₹500/- INR</p>
+      </div>
+      <div class="pricing-card">
+        <h3>Research Scholar</h3>
+        <p>₹700/- INR</p>
+      </div>
+      <div class="pricing-card">
+        <h3>Faculty / Scientist</h3>
+        <p>₹21,500/- INR</p>
+      </div>
+      <div class="pricing-card">
+        <h3>Foreign PG Student / Research Scholar</h3>
+        <p>$20 - $30 USD</p>
+        <small>* Blended mode only for foreign participants</small>
+      </div>
+    </div>
+
+    <div class="notes">
+      <h3>Important Notes:</h3>
+      <ul>
+        <li>* The registration fee is exclusive of accommodation charges. Guest House or Hostel will be arranged on a payable basis.</li>
+        <li>* Fee covers access to the conference kit, lecture sessions, brochures, breakfast, lunch, and dinner.</li>
+        <li>Once the absract has been reviewed and approved payment link will be available in the profile page</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Navbar toggle for mobile
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

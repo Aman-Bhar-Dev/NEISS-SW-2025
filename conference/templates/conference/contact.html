@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | NEISS2025</title>
+  <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+</head>
+<body>
+<header class="navbar">
+  <div class="logo">NEISS<span>2025</span></div>
+  <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'about' %}">About</a></li>
+    <li><a href="{% url 'contact' %}" class="active">Contact</a></li>
+    <li><a href="{% url 'submit' %}">Submit</a></li>
+    {% if user.is_authenticated %}
+      <li><a href="{% url 'profile' %}">My Profile</a></li>
+      <li><a href="{% url 'logout' %}">Logout</a></li>
+    {% else %}
+      <li><a href="{% url 'signup' %}">Sign Up</a></li>
+      <li><a href="{% url 'login' %}">Login</a></li>
+    {% endif %}
+  </ul>
+</header>
+
+<main class="contact-container">
+  <h2>Contact Information</h2>
+
+  <section class="contact-section">
+    <h3>General Contact</h3>
+    <p>You can write to us at our email or through the following contact details:</p>
+    <ul>
+      <li>Email: <a href="mailto:ausneiss25@gmail.com">ausneiss25@gmail.com</a></li>
+      <li><strong>Ram K. Soren</strong> — 📞 +49-8368772439, +91-6002326481</li>
+    </ul>
+  </section>
+
+  <section class="contact-section">
+    <h3>Seminar Convenors</h3>
+    <ul>
+      <li><strong>Dr. Lalzo S Thangjom</strong> — 📞 88129 31084<br>
+          Department of Social Work</li>
+      <li><strong>Prof. M. Tineshowri Devi</strong><br>
+          Department of Social Work</li>
+    </ul>
+  </section>
+
+  <section class="contact-section">
+    <h3>Travel & Accommodation</h3>
+    <ul>
+      <li><strong>M. Ishwarjt Singh</strong> — 📞 +91-9101246220</li>
+      <li><strong>Jani Esekkial M.</strong> — 📞 +91-9894296615</li>
+    </ul>
+  </section>
+
+  <section class="contact-section">
+    <h3>Food Queries</h3>
+    <ul>
+      <li><strong>Stephen Jeng Ronghi</strong> — 📞 +91-6000595516</li>
+      <li><strong>Manjam Wangshu</strong> — 📞 +91-7005416986</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 Assam University Silchar | NEISS2025</p>
+</footer>
+<script src="{% static 'js/contact.js' %}"></script>
+</body>
+</html>
